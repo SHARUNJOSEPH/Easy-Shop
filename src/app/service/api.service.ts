@@ -10,7 +10,7 @@ import { catchError, retry } from 'rxjs/operators';
 export class ApiService {
   constructor(private https: HttpClient) {}
   getProduct() {
-    return this.http.get<any>('http://fakestoreapi.com/products').pipe(
+    return this.https.get<any>('https://fakestoreapi.com/products').pipe(
       map((res: any) => {
         return res;
       })
