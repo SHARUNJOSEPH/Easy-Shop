@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './shared/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './component/login/login.component';
+import { SignupComponent } from './component/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { LoginComponent } from './component/login/login.component';
     ProductsComponent,
     FilterPipe,
     LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
