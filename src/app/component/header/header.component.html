@@ -1,54 +1,4 @@
 <!-- <header>
-  <nav class="navbar bg-primary shadow-sm">
-    <div class="navbar-brand align-item-center d-flex">
-      <i style="font-size: 40px" class="fas fa-store">&nbsp; </i>
-      <strong style="font: size 25px">Easy-Shop</strong>
-      <div class="div form-group">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Search for the Product"
-        />
-        <span class="fas fa-search search-icon"></span>
-        <button class="btn btn-primary">
-          <i style="font: size 30px" class="fas fa-cart-plus"></i>
-          <div style="font-size: 10px" class="badge bg-danger">10</div>
-        </button>
-      </div>
-    </div>
-  </nav>
-</header> -->
-
-<!-- <header>
-  <nav class="navbar bg-primary shadow-sm">
-    <div class="navbar-brand align-item-center d-flex">
-      <i style="font-size: 40px" class="fas fa-store">&nbsp; </i>
-      <strong style="font: size 25px">Easy-Shop</strong>&nbsp;
-      <div class="div form-group"></div>
-
-      <form class="navbar-form navbar-left">
-        <div class="input-group">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Search for the Product"
-          />
-          <div class="input-group-btn">
-            <button class="btn btn-default" type="submit">
-              <span class="fas fa-search search-icon"></span>
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <button class="btn btn-primary">
-      <i style="font: size 30px" class="fas fa-cart-plus"></i>
-      <div style="font-size: 10px" class="badge bg-danger">10</div>
-    </button>
-  </nav>
-</header> -->
-
-<header>
   <div class="bd-example">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
@@ -68,6 +18,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarColor02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"></li>
@@ -103,4 +54,51 @@
       </div>
     </nav>
   </div>
-</header>
+</header> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Easy-Shop</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <form class="d-flex">
+          <br />
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            [(ngModel)]="searchTerm"
+            (keyup)="search($event)"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </ul>
+      <br />
+      <ul>
+        <button routerLink="cart" type="button" class="btn btn-secondary">
+          <i style="font: size 30px" class="fas fa-cart-plus"></i>
+          <div style="font-size: 10px" class="badge bg-danger">
+            {{ totalItem }}
+          </div>
+        </button>
+      </ul>
+      <ul>
+        <button routerLink="" type="button" class="btn btn-secondary">
+          <i style="font: size 30px" class="fas fa-user"> Login</i>
+        </button>
+      </ul>
+    </div>
+  </div>
+</nav>
